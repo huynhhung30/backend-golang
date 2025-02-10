@@ -21,7 +21,7 @@ func (db *DB) Migrator() Migrator {
 
 // AutoMigrate run auto migration for given models
 func (db *DB) AutoMigrate(dst ...interface{}) error {
-	return db.Debug().Migrator().AutoMigrate(dst...)
+	return db.Migrator().AutoMigrate(dst...)
 }
 
 // ViewOption view option
